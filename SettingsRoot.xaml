@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui" xmlns:micro="clr-namespace:Microcharts.Maui;assembly=Microcharts.Maui" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ReviewsInTheDiningRoom.SettingsRoot" BackgroundImageSource="background.jpg" Shell.NavBarIsVisible="False" >
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="rootPanel" TargetType="VerticalStackLayout">
+                <!-- Панельки -->
+                <Setter Property="Padding" Value="10" />
+                <Setter Property="WidthRequest" Value="940"/>
+                <Setter Property="Margin" Value="10" />
+            </Style>
+            <Style x:Key="buttonStandart" TargetType="Button">
+                <!-- Кнопки -->
+                <Setter Property="WidthRequest" Value="840" />
+                <Setter Property="Margin" Value="5" />
+            </Style>
+            <Style x:Key="rootLabel" TargetType="Label">
+                <!-- Базовые харк-ти надписи -->
+                <Setter Property="TextColor" Value="WhiteSmoke"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="FontSize" Value="32"/>
+                <Setter Property="Margin" Value="20"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <HorizontalStackLayout>
+        <VerticalStackLayout x:Name="leftPanel" Style="{StaticResource rootPanel}">
+            <Label x:Name="dateLabel" Text="" Style="{StaticResource rootLabel}"/>
+            <micro:ChartView x:Name="donatChart" Margin="50" HeightRequest="600" BackgroundColor="Transparent"/>
+            <HorizontalStackLayout>
+                <VerticalStackLayout WidthRequest="470">
+                    <Label x:Name="likeLabel" Text="Понравилось" HorizontalOptions="Center" TextColor="WhiteSmoke"/>
+                    <HorizontalStackLayout HorizontalOptions="Fill">
+                        <Button x:Name="likeBtnAdd" Text="+" Clicked="OnButtonLikeAddClicked"/>
+                        <Label x:Name="likeCountLabel" Text="0" WidthRequest="300" Margin="10" TextColor="WhiteSmoke" HorizontalTextAlignment="Center"/>
+                        <Button x:Name="likeBtnMin" Text="-" Clicked="OnButtonLikeMinClicked"/>
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+                <VerticalStackLayout WidthRequest="470" >
+                    <Label x:Name="dislikeLabel" HorizontalOptions="Center" Text="Не понравилось" TextColor="WhiteSmoke"/>
+                    <HorizontalStackLayout HorizontalOptions="Fill" >
+                        <Button x:Name="dislikeBtnAdd" Text="+"  Clicked="OnButtonDisLikeAddClicked"/>
+                        <Label x:Name="dislikeCountLabel" Text="0" WidthRequest="300" Margin="10" TextColor="WhiteSmoke" HorizontalTextAlignment="Center"/>
+                        <Button x:Name="dislikeBtnMin" Text="-" Clicked="OnButtonDisLikeMinClicked"/>
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+            </HorizontalStackLayout>
+            <Button x:Name="powerOff" Text="Выключить пк" Margin="50" WidthRequest="870" Clicked="OnPowerOfClicked"/>
+        </VerticalStackLayout>
+        <ScrollView x:Name="buttonStack" HorizontalOptions="Fill">
+            <VerticalStackLayout x:Name="rightPanel" Style="{StaticResource rootPanel}" >
+            </VerticalStackLayout>
+        </ScrollView>
+    </HorizontalStackLayout>
+</ContentPage>

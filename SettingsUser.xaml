@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="ReviewsInTheDiningRoom.SettingsUser" xmlns:micro="clr-namespace:Microcharts.Maui;assembly=Microcharts.Maui" xmlns:drawable="clr-namespace:ReviewsInTheDiningRoom" xmlns="http://schemas.microsoft.com/dotnet/2021/maui" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" BackgroundImageSource="background.jpg" Shell.NavBarIsVisible="False" >
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="rootPanel" TargetType="VerticalStackLayout">
+                <!-- Панельки -->
+                <Setter Property="Padding" Value="10" />
+                <Setter Property="WidthRequest" Value="940"/>
+                <Setter Property="Margin" Value="10" />
+            </Style>
+            <Style x:Key="buttonStandart" TargetType="Button">
+                <!-- Кнопки -->
+                <Setter Property="WidthRequest" Value="840" />
+                <Setter Property="Margin" Value="5" />
+            </Style>
+            <Style x:Key="rootLabel" TargetType="Label">
+                <!-- Базовые харк-ти надписи -->
+                <Setter Property="TextColor" Value="WhiteSmoke"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="FontSize" Value="32"/>
+                <Setter Property="Margin" Value="20"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <HorizontalStackLayout>
+        <VerticalStackLayout x:Name="leftPanel" Style="{StaticResource rootPanel}">
+            <Label x:Name="dateLabel" Text="" Style="{StaticResource rootLabel}"/>
+            <micro:ChartView x:Name="donatChart" Margin="50" HeightRequest="800" BackgroundColor="Transparent"/>
+        </VerticalStackLayout>
+        <ScrollView x:Name="buttonStack" HorizontalOptions="Fill">
+            <VerticalStackLayout x:Name="rightPanel" Style="{StaticResource rootPanel}" >
+            </VerticalStackLayout>
+        </ScrollView>
+    </HorizontalStackLayout>
+    
+</ContentPage>

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"  x:Class="ReviewsInTheDiningRoom.Settings" BackgroundImageSource="background.jpg" Shell.NavBarIsVisible="False" >
+            <ContentPage.Resources>
+                <ResourceDictionary>
+                    <Style x:Key="buttonStyle" TargetType="Button"> <!-- Кнопки -->
+                        <Setter Property="Margin" Value="10" />
+                        <Setter Property="WidthRequest" Value= "100"/>
+                        <Setter Property="HeightRequest" Value= "100"/>
+                        <Setter Property="HorizontalOptions" Value="Fill"  />
+                    </Style>
+                </ResourceDictionary>
+            </ContentPage.Resources>
+    <ScrollView>
+        <VerticalStackLayout Spacing="25">
+            <Label x:Name="title" Text = "Введите пинкод" FontSize="64" TextColor="WhiteSmoke" HorizontalTextAlignment="Center" />
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" >
+                <Label x:Name="passwordLabel" Text="" FontSize="24" TextColor="WhiteSmoke" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" WidthRequest="220"/>
+                <Button x:Name="clearButton"  Text="c" Style="{StaticResource buttonStyle}" Clicked="OnButtonClicked"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" >
+                <Button x:Name="oneButton"   Text="1" Style="{StaticResource buttonStyle}" Clicked="OnButtonClicked"/>
+                <Button x:Name="twoButton"   Text="2" Style="{StaticResource buttonStyle}" Clicked="OnButtonClicked"/>
+                <Button x:Name="threeButton" Text="3" Style="{StaticResource buttonStyle}" Clicked="OnButtonClicked"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Button x:Name="fourButton"   Text="4" Style="{StaticResource buttonStyle}" Clicked="OnButtonClicked"/>
+                <Button x:Name="fiveButton"   Text="5" Style="{StaticResource buttonStyle}" Clicked="OnButtonClicked"/>
+                <Button x:Name="sixButton"    Text="6" Style="{StaticResource buttonStyle}" Clicked="OnButtonClicked"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Button x:Name="sevenButton"   Text="7" Style="{StaticResource buttonStyle}" Clicked="OnButtonClicked"/>
+                <Button x:Name="eightButton"   Text="8" Style="{StaticResource buttonStyle}" Clicked="OnButtonClicked"/>
+                <Button x:Name="nineButton"    Text="9" Style="{StaticResource buttonStyle}" Clicked="OnButtonClicked"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Button x:Name="zeroButton"    Text="0" Style="{StaticResource buttonStyle}" Clicked="OnButtonClicked"/>
+                <Button x:Name="enterButton"   Text="enter" Style="{StaticResource buttonStyle}" WidthRequest="220" Clicked="OnButtonClicked"/>
+            </StackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+
+
+</ContentPage>
