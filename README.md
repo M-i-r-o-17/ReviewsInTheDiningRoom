@@ -14,6 +14,10 @@
 - Диаграмы вывода статистики
 - Блокировка выхода из приложения по средствам windows.
 
+## Вспомогательная программа
+
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=M-i-r-o-17&repo=ConverterData)](https://github.com/M-i-r-o-17/ConverterData)
+
    [dill]: <https://github.com/joemccann/dillinger>
    [git-repo-url]: <https://github.com/joemccann/dillinger.git>
    [john gruber]: <http://daringfireball.net>
